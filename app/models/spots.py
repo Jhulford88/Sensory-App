@@ -12,15 +12,15 @@ class Spot(db.Model):
     address = db.Column(db.String(55), nullable=False)
     city = db.Column(db.String(55), nullable=False)
     state = db.Column(db.String(2), nullable=False)
-    # category_id = db.Column(db.Integer, db.ForeignKey(
-    #     add_prefix_for_prod("categories.id")), nullable=False)
+    category_id = db.Column(db.Integer, db.ForeignKey(
+        add_prefix_for_prod("categories.id")), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey(
         add_prefix_for_prod("users.id")), nullable=False)
     cover_photo = db.Column(db.String, nullable=False)
     description = db.Column(db.Text, nullable=False)
 
    #Relationships
-    # category = db.relationship("Category",back_populates="spot")
+    category = db.relationship("Category",back_populates="spot")
     # reviews = db.relationship('Review', back_populates='spot', cascade="all, delete")
     user = db.relationship('User')
 
@@ -33,7 +33,7 @@ class Spot(db.Model):
             'address': self.address,
             'city': self.city,
             'state': self.state,
-            # 'categoryId': self.category_id,
+            'categoryId': self.category_id,
             'coverPhoto': self.cover_photo,
             'userId':self.user_id,
             # "photos": [photo.to_dict() for photo in self.trail_photos],
