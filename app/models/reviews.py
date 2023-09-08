@@ -22,6 +22,7 @@ class Review(db.Model):
 
     # Relationships
     users = db.relationship('User', back_populates='reviews')
+    spots = db.relationship('Spot', back_populates='reviews', cascade="all, delete")
 
     def to_dict(self):
         return{

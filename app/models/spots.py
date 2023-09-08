@@ -21,7 +21,7 @@ class Spot(db.Model):
 
    #Relationships
     category = db.relationship("Category",back_populates="spot")
-    # reviews = db.relationship('Review', back_populates='spot', cascade="all, delete")
+    reviews = db.relationship('Review', back_populates='spots', cascade="all, delete")
     user = db.relationship('User')
 
 
@@ -38,5 +38,5 @@ class Spot(db.Model):
             'userId':self.user_id,
             # "photos": [photo.to_dict() for photo in self.trail_photos],
             "description": self.description,
-            # "reviews": [review.to_dict() for review in self.reviews]
+            "reviews": [review.to_dict() for review in self.reviews]
         }
