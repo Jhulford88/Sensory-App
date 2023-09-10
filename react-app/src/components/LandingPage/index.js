@@ -15,8 +15,10 @@ const LandingPage = () => {
   //Dispatch
 
   return (
-    <div>
-      <h1>Hello from landing page</h1>
+    <div className="landing-page-parent-div">
+      <div className="landing-page-h1-container">
+        <h1>Welcome to Sensory Score</h1>
+      </div>
     </div>
   );
 };

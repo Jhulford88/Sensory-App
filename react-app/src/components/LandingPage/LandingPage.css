@@ -1,0 +1,12 @@
+.landing-page-parent-div {
+    border: 2px solid blue;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.landing-page-h1-container {
+    border: 2px solid green;
+    text-align: center;
+}
