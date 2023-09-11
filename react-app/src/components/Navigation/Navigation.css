@@ -2,14 +2,21 @@
   position: absolute;
 }
 
+.hamburger-button {
+  background-color: white;
+  border: none;
+  font-size: 35px;
+}
+
 .hidden {
   display: none;
 }
 
 .navigation-ul {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
 }

@@ -19,16 +19,6 @@ function Navigation({ isLoaded }) {
           ></img>
         </NavLink>
       </li>
-      <li>
-        <NavLink exact to="/">
-          Places
-        </NavLink>
-      </li>
-      <li>
-        <NavLink exact to="/">
-          Preferences
-        </NavLink>
-      </li>
       {isLoaded && (
         <li>
           <ProfileButton user={sessionUser} />
