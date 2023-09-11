@@ -4,9 +4,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .landing-page-h1-container {
     border: 2px solid green;
     text-align: center;
+    width: 80%;
 }
