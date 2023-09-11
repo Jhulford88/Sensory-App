@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ProfileButton from "./ProfileButton";
+import logo from "../Navigation/SensoryScore.png";
 import "./Navigation.css";
 
 function Navigation({ isLoaded }) {
@@ -11,7 +12,11 @@ function Navigation({ isLoaded }) {
     <ul className="navigation-ul">
       <li>
         <NavLink exact to="/">
-          Home
+          <img
+            className="navbar-logo"
+            src={logo}
+            alt="Sensory Score Logo and Link to Home Page"
+          ></img>
         </NavLink>
       </li>
       <li>
